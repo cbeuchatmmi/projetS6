@@ -8,6 +8,7 @@ var sequence = ref([]);
 var displayedSequence = ref([]);
 var displayedIndices = ref([]);
 var showStartButton = ref(true);
+var showLoose = ref(false);
 var phase = ref(null);
 
 function hideStartButton() {
@@ -17,6 +18,7 @@ function hideStartButton() {
 
 function startTest() {
     showStartButton.value = false;
+    showLoose.value = false;
     roundCounter.value++; // Incrémenter le compteur de manches
     document.getElementById('roundsCounter').textContent = `Nombre de manche : ${roundCounter.value}`; // Mettre à jour le texte du paragraphe
     const numbersContainer = document.getElementById('numbersContainer');
@@ -112,14 +114,13 @@ function checkNumber(button, selectedNumber) {
         console.log("Correct!");
         currentIndex++;
         if (currentIndex === sequence.value.length) {
-            alert("Séquence réussie!");
             currentIndex = 0; // Réinitialise pour le prochain tour
             startTest(); // Génère une nouvelle séquence pour le prochain tour
         }
     } else {
-        alert("Incorrect! Le jeu est terminé.");
         console.log("roundCounter", roundCounter.value)
         score.value.score_time = roundCounter.value;
+        showLoose.value = true;
 
         addScore(); // Appel à la fonction addScore
         currentIndex = 0; // Réinitialise pour recommencer
@@ -181,6 +182,7 @@ onMounted(() => {
                 </button> -->
             </div>
         </div>
+        <p v-if="showLoose" class="memory__paragraph">Vous avez perdu !</p>
         <button v-if="showStartButton" @click="startTest" class="memory__start">Commencer le test</button>
     </div>
 </template>

@@ -2,6 +2,9 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
+// Importer useRouter à l'extérieur du module setup
+import { useRouter } from 'vue-router';
+
 // Client axios global
 const client = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
@@ -23,6 +26,9 @@ const loginData = ref({
     user_mdp: '',
 });
 
+// Utiliser useRouter à l'intérieur du module setup
+const router = useRouter();
+
 // Fonction de connexion
 const login = async () => {
     try {
@@ -36,6 +42,8 @@ const login = async () => {
             localStorage.setItem('userToken', userToken.value);
         }
 
+        // Utiliser le router pour rediriger l'utilisateur
+        router.push('/');
         console.log('Connecté avec succès', response.data);
     } catch (error) {
         console.error('Erreur lors de la connexion :', error.message);
