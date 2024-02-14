@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1>Viens tester ta vivacité d'esprit !</h1>
+  <h1 class="home__title">Viens tester ta vivacité d'esprit !</h1>
 
   <div class="home__content">
 
@@ -21,11 +21,16 @@
 
 <style lang="scss" scoped>
 .home {
+  &__title {
+    margin: 32px;
+
+  }
+
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2%;
+    gap: 5%;
 
     &--link {
       display: flex;

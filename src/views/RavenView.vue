@@ -74,14 +74,14 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
     &__right {
         position: absolute;
         right: 10%;
-        top: 20%;
+        top: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 30%;
 
         &--rules {
-            margin-bottom: 3rem;
+            margin-bottom: 5rem;
 
             &--title {
                 font-size: 24px;
@@ -91,6 +91,8 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
             &--paragraph {
                 font-size: 16px;
                 color: white;
+                margin-bottom: 5rem;
+
             }
         }
     }

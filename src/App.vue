@@ -31,9 +31,9 @@ onMounted(() => {
         <RouterLink class="wrapper__nav--link" to="/">
           <Logo />
         </RouterLink>
-        <RouterLink class="wrapper__nav--link" to="/raven">Raven</RouterLink>
-        <RouterLink class="wrapper__nav--link" to="/mouse">Mouse</RouterLink>
-        <RouterLink class="wrapper__nav--link" to="/memory">Memory</RouterLink>
+        <RouterLink class="wrapper__nav--link" to="/raven">Corbeau</RouterLink>
+        <RouterLink class="wrapper__nav--link" to="/mouse">Souris</RouterLink>
+        <RouterLink class="wrapper__nav--link" to="/memory">Mémoire</RouterLink>
         <RouterLink class="wrapper__nav--link" to="/login">
           <Profil />
         </RouterLink>
