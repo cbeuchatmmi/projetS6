@@ -15,6 +15,7 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
 
         <div class="game__right">
             <div class="game__right--rules">
+                <h1 class="game__right--rules--title">Labyrinthe de la souris</h1>
                 <h2 class="game__right--rules--title">Règles</h2>
                 <p class="game__right--rules--paragraph">Atteindre le Fromage</p>
 
@@ -77,14 +78,14 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
     &__right {
         position: absolute;
         right: 10%;
-        top: 20%;
+        top: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 30%;
 
         &--rules {
-            margin-bottom: 3rem;
+            margin-bottom: 5rem;
 
             &--title {
                 font-size: 24px;
@@ -94,7 +95,10 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
             &--paragraph {
                 font-size: 16px;
                 color: white;
+                margin-bottom: 5rem;
+
             }
+
         }
     }
 }

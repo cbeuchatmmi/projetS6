@@ -15,6 +15,7 @@ import ToucheTop from '@/components/Icon/ToucheTop.vue';
 
         <div class="game__right">
             <div class="game__right--rules">
+                <h1 class="game__right--rules--title">Jeu du Corbeau</h1>
                 <h2 class="game__right--rules--title">Règles</h2>
                 <p class="game__right--rules--paragraph">Ouvrir la Cage</p>
 
